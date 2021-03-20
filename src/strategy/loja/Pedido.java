@@ -1,5 +1,6 @@
 package strategy.loja;
 
+import observer.PedidoHandler;
 import strategy.StateException;
 import strategy.loja.situacao.Situacao;
 import strategy.loja.situacao.estados.Aberto;
@@ -13,15 +14,18 @@ public class Pedido {
     private BigDecimal valor;
     private Integer quantidadeDeItens;
     private Situacao situacao;
-
+    public PedidoHandler handler;
 
     public Pedido() {
+        this.situacao = new Aberto();
+        this.handler = new PedidoHandler();
     }
 
     public Pedido(BigDecimal valor) {
         this.valor = valor;
         this.quantidadeDeItens = 1;
         this.situacao = new Aberto();
+        this.handler = new PedidoHandler();
     }
 
     public Pedido(BigDecimal valor, Integer quantidadeDeItens) {
@@ -50,6 +54,7 @@ public class Pedido {
     }
 
     public void setSituacao(Situacao situacao) {
+        handler.notify(this);
         this.situacao = situacao;
     }
 
