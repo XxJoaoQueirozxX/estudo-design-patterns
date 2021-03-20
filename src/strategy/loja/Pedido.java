@@ -1,10 +1,19 @@
 package strategy.loja;
 
+import strategy.StateException;
+import strategy.loja.situacao.Situacao;
+import strategy.loja.situacao.estados.Aberto;
+
 import java.math.BigDecimal;
 
 public class Pedido {
+
+
+
     private BigDecimal valor;
     private Integer quantidadeDeItens;
+    private Situacao situacao;
+
 
     public Pedido() {
     }
@@ -12,6 +21,7 @@ public class Pedido {
     public Pedido(BigDecimal valor) {
         this.valor = valor;
         this.quantidadeDeItens = 1;
+        this.situacao = new Aberto();
     }
 
     public Pedido(BigDecimal valor, Integer quantidadeDeItens) {
@@ -33,5 +43,33 @@ public class Pedido {
 
     public void setQuantidadeDeItens(Integer quantidadeDeItens) {
         this.quantidadeDeItens = quantidadeDeItens;
+    }
+
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
+
+    public void pagar(){
+        situacao.pagar(this);
+    }
+
+    public void entregar(){
+        situacao.entregar(this);
+    }
+
+    public void cancelar(){
+        situacao.cancelar(this);
+    }
+
+    public void reabrir(){
+        situacao.reabrir(this);
+    }
+
+    public void abrirChamado(){
+        this.situacao.abrirChamado();
     }
 }
