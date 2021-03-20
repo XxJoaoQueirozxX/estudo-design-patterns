@@ -10,12 +10,14 @@ public class DescontoPorQuantidade extends Desconto{
         super(proximo);
     }
 
+
     @Override
-    public BigDecimal calcular(Pedido pedido) {
-        if (pedido.getQuantidadeDeItens() > 10) {
-            return pedido.getValor().multiply(BigDecimal.valueOf(.05));
-        }else {
-            return BigDecimal.ZERO;
-        }
+    protected BigDecimal aplicar(Pedido pedido) {
+        return pedido.getValor().multiply(BigDecimal.valueOf(.05));
+    }
+
+    @Override
+    protected boolean deveAplicar(Pedido pedido) {
+        return pedido.getQuantidadeDeItens() > 10;
     }
 }
