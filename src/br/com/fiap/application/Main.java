@@ -1,6 +1,6 @@
 package br.com.fiap.application;
 
-import br.com.fiap.application.domain.loja.Pedido;
+import br.com.fiap.domain.loja.Pedido;
 
 public class Main {
 

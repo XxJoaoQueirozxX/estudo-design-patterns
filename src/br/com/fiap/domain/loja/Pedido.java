@@ -1,8 +1,8 @@
-package br.com.fiap.application.domain.loja;
+package br.com.fiap.domain.loja;
 
-import br.com.fiap.application.domain.observer.PedidoHandler;
-import br.com.fiap.application.domain.loja.situacao.Situacao;
-import br.com.fiap.application.domain.loja.situacao.estados.Aberto;
+import br.com.fiap.domain.observer.PedidoHandler;
+import br.com.fiap.domain.loja.situacao.Situacao;
+import br.com.fiap.domain.loja.situacao.estados.Aberto;
 
 import java.math.BigDecimal;
 

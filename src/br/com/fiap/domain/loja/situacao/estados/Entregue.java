@@ -1,6 +1,6 @@
-package br.com.fiap.application.domain.loja.situacao.estados;
+package br.com.fiap.domain.loja.situacao.estados;
 
-import br.com.fiap.application.domain.loja.situacao.Situacao;
+import br.com.fiap.domain.loja.situacao.Situacao;
 
 public class Entregue extends Situacao {
     @Override

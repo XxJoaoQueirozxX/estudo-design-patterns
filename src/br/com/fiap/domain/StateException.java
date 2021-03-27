@@ -1,4 +1,4 @@
-package br.com.fiap.application.domain;
+package br.com.fiap.domain;
 
 public class StateException extends RuntimeException{
     private static final long serialVersionUID=1L;

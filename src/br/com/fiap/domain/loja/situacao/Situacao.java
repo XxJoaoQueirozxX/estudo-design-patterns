@@ -1,7 +1,7 @@
-package br.com.fiap.application.domain.loja.situacao;
+package br.com.fiap.domain.loja.situacao;
 
-import br.com.fiap.application.domain.StateException;
-import br.com.fiap.application.domain.loja.Pedido;
+import br.com.fiap.domain.StateException;
+import br.com.fiap.domain.loja.Pedido;
 
 public abstract class Situacao {
 

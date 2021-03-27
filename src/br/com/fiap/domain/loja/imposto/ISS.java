@@ -1,6 +1,6 @@
-package br.com.fiap.application.domain.loja.imposto;
+package br.com.fiap.domain.loja.imposto;
 
-import br.com.fiap.application.domain.loja.Pedido;
+import br.com.fiap.domain.loja.Pedido;
 
 import java.math.BigDecimal;
 
