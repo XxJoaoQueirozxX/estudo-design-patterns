@@ -4,10 +4,14 @@ import br.com.fiap.domain.loja.Pedido;
 
 import java.math.BigDecimal;
 
-public class ISS implements Imposto{
+public class ISS extends Imposto{
+
+    public ISS(Imposto outroImposto) {
+        super(outroImposto);
+    }
 
     @Override
-    public BigDecimal calcular(Pedido pedido) {
+    public BigDecimal calcularImposto(Pedido pedido) {
         return pedido.getValor().multiply(BigDecimal.valueOf(.02));
     }
 }

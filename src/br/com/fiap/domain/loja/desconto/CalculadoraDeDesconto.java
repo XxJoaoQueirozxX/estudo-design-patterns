@@ -1,4 +1,4 @@
-package br.com.fiap.domain.desconto;
+package br.com.fiap.domain.loja.desconto;
 
 import br.com.fiap.domain.loja.Pedido;
 

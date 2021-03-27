@@ -1,12 +1,13 @@
 package br.com.fiap.domain.loja.situacao.estados;
 
 import br.com.fiap.domain.loja.Pedido;
+import br.com.fiap.domain.loja.situacao.ChamadoFacade;
 import br.com.fiap.domain.loja.situacao.Situacao;
 
 public class Aberto extends Situacao {
     @Override
     public void abrirChamado() {
-        System.out.println("Chamado aberto para financeiro");
+        new ChamadoFacade().abrir(null);
     }
 
     @Override
